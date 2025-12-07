@@ -1,0 +1,52 @@
+# ========== Unity generated folders ==========
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+UserSettings/
+MemoryCaptures/
+
+# ========== IDE / editor files ==========
+.vs/
+.vscode/
+.idea/
+*.csproj
+*.sln
+*.user
+*.unityproj
+
+# ========== OS-specific files ==========
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ========== Crash reports & backups ==========
+sysinfo.txt
+*.stacktrace
+*.tmp
+*.bak
+
+# ========== Unity Asset Store tools cache ==========
+[Aa]ssets/AssetStoreTools*
+
+# ========== TextMesh Pro (auto-generated) ==========
+[Aa]ssets/TextMesh Pro/Resources/Font Asset Creator/*
+[Aa]ssets/TextMesh Pro/Resources/Sprite Asset Importer/*
+
+# ========== Rider / JetBrains ==========
+.idea/
+*.sln.iml
+
+# ========== Other optional ignores ==========
+# Uncomment if you don't want to track builds for specific platforms
+# [Bb]uilds/*
+# [Ww]ebGLBuild/*
+
+# Ignore generated meta for deleted assets (optional, Unity handles this)
+# [Aa]ssets/**/*.meta
