@@ -4,19 +4,26 @@ using UnityEngine;
 public class FruitRecollection : MonoBehaviour
 {
     [SerializeField] private int fruitAmount;
-    FruitType fruitType;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Fruit"))
-        {
-            AddFruit(fruitType);
+        if (other.CompareTag("Fruit")) return;
+        
+        FruitHolder fruitHolder = other.GetComponent<FruitHolder>();
+        
+        if (fruitHolder == null) return;
+        
+        
+            Fruit fruit = fruitHolder.FruitData;
+        
+            FruitType type = fruit.Type;
+            AddFruit(type);
             Destroy(other.gameObject);
-        }
     }
 
-    private void AddFruit(FruitType type)
+    private void AddFruit(FruitType type )
     {
+        
         fruitAmount ++;
     }
 }

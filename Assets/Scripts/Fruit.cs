@@ -9,5 +9,5 @@ public class Fruit : ScriptableObject
     [SerializeField] float maxCapacity;
     [SerializeField] float cooldownToAvailable;
 
-    
+    public FruitType Type => type;
 }

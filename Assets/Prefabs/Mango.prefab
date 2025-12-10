@@ -68,6 +68,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mango
       objectReference: {fileID: 0}
+    - target: {fileID: 7950783555630527301, guid: e0cf6422683ff5d4aa733c45c61a8503, type: 3}
+      propertyPath: fruitData
+      value: 
+      objectReference: {fileID: 11400000, guid: 16448ef8c728bf0469ee81b17496d7d0, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
