@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b58269328bdc846a2852a5b27b7f03, type: 3}
   m_Name: Mango
   m_EditorClassIdentifier: Assembly-CSharp::Fruit
-  type: 0
+  type: 1
   timeBetweenFruits: 0
   maxCapacity: 0
   cooldownToAvailable: 0

@@ -23,11 +23,20 @@ public class FruitRecollection : MonoBehaviour
             Destroy(other.gameObject);
     }
 
-    private void AddFruit(FruitType type )
+    public void AddFruit(FruitType type )
     {
         fruitCounter.TryAdd(type, 0);
 
         fruitCounter[type]++;
+        ShowCounter();
+    }
+
+    public void ShowCounter()
+    {
+        foreach (var fruit in fruitCounter)
+        {
+            Debug.Log(fruit.Key + ": " + fruit.Value);
+        }
     }
     
     
