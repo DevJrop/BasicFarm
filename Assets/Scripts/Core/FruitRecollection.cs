@@ -18,25 +18,32 @@ namespace Core
         
             if (fruitHolder == null) return;
         
+            FruitReader(other, fruitHolder);
+        }
+
+        private void FruitReader(Collider2D other, FruitHolder fruitHolder)
+        {
             Fruit fruit = fruitHolder.FruitData;
         
             FruitType type = fruit.Type;
+            
             AddFruit(type);
             Destroy(other.gameObject);
         }
-        public void AddFruit(FruitType type )
+
+        public void AddFruit(FruitType type)
         {
-            fruitCounter.TryAdd(type, -1);
+            fruitCounter.TryAdd(type, 1);
             fruitCounter[type]++;
-            PlayerPrefs.SetInt("FruitCounter", fruitCounter[type]);
         }
 
-        private void Update()
+        public int FruitCount(FruitType type)
         {
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                Debug.Log(PlayerPrefs.GetInt("FruitCounter"));
-            }
+            if (fruitCounter.TryGetValue(type, out int count))
+                return count;
+            
+            return 0;
         }
+       
     }
 }

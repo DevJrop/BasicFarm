@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class BasketGrab : MonoBehaviour
 {
+    [SerializeField] GameObject basketSpot;
     private Vector3 startPos;
     private Camera cam;
     private bool grabbing;
@@ -10,6 +11,7 @@ public class BasketGrab : MonoBehaviour
     {
         startPos = transform.position;
         cam = Camera.main;
+        
     }
 
     void OnMouseDown()
@@ -33,6 +35,6 @@ public class BasketGrab : MonoBehaviour
     void OnMouseUp()
     {
         grabbing = false;
-        transform.position = startPos;
+        transform.position = basketSpot.transform.position;
     }
 }

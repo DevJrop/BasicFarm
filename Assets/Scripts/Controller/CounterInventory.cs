@@ -1,26 +1,34 @@
 using System;
 using Core;
+using TMPro;
 using UnityEngine;
 
 namespace Controller
 {
     public class CounterInventory : MonoBehaviour
     {
-        FruitRecollection fruitRecollection;
+        [SerializeField] private FruitRecollection fruitRecollection;
+        [SerializeField] private TMP_Text appleText;
+        [SerializeField] private TMP_Text bananoText;
+        [SerializeField] private TMP_Text mangoText;
         
-
-        private void Awake()
+        private void Update()
         {
-            fruitRecollection = GetComponent<FruitRecollection>();
+            ShowList();
         }
 
-        public void ShowList()
+        private void ShowList()
         {
-            if (fruitRecollection.fruitCounter.TryGetValue(FruitType.Manzana, out int count))
-            {
-                
+            int appleValue = fruitRecollection.FruitCount(FruitType.Manzana);
+            appleText.text = appleValue.ToString();
             
-            }
+            int bananaValue = fruitRecollection.FruitCount(FruitType.Banano);
+            bananoText.text = appleValue.ToString();
+            
+            int mangoValue = fruitRecollection.FruitCount(FruitType.Mango);
+            mangoText.text = appleValue.ToString();
         }
+
+        
     }
 }
