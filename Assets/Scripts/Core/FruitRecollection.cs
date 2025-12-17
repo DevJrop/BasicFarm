@@ -9,6 +9,8 @@ namespace Core
         [SerializeField] private int fruitAmount;
 
         public Dictionary<FruitType, int> fruitCounter = new Dictionary<FruitType, int>();
+        
+        public event Action ChangeUI;
 
         private void OnTriggerEnter2D(Collider2D other)
         {
@@ -28,13 +30,16 @@ namespace Core
             FruitType type = fruit.Type;
             
             AddFruit(type);
+            ChangeUI?.Invoke();
+            Debug.Log("Despues de Invoke");
             Destroy(other.gameObject);
         }
 
         public void AddFruit(FruitType type)
         {
-            fruitCounter.TryAdd(type, 1);
-            fruitCounter[type]++;
+            fruitCounter.TryGetValue(type, out int count);
+            fruitCounter[type] = count + 1;
+            
         }
 
         public int FruitCount(FruitType type)
