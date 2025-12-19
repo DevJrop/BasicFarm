@@ -5,9 +5,6 @@ using UnityEngine;
 public class Fruit : ScriptableObject
 {
     [SerializeField] FruitType type;
-    [SerializeField] float timeBetweenFruits;
-    [SerializeField] float maxCapacity;
-    [SerializeField] float cooldownToAvailable;
 
     public FruitType Type => type;
 }

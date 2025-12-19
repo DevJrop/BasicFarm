@@ -31,7 +31,6 @@ namespace Core
             
             AddFruit(type);
             ChangeUI?.Invoke();
-            Debug.Log("Despues de Invoke");
             Destroy(other.gameObject);
         }
 

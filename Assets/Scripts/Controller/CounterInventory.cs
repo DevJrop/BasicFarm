@@ -15,14 +15,11 @@ namespace Controller
         public void OnEnable()
         {
             fruitRecollection.ChangeUI += ShowList;
-            
-            Debug.Log("suscrito");
         }
 
         public void OnDisable()
         {
             fruitRecollection.ChangeUI -= ShowList;
-            Debug.Log("Desuscrito");
         }
 
 

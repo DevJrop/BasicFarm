@@ -1,10 +1,10 @@
 using UnityEngine;
 
-namespace Movement
+namespace Prefabs.Seed
 {
-    public class BasketGrab : MonoBehaviour
+    public class DropAndDrag : MonoBehaviour
     {
-        [SerializeField] GameObject basketSpot;
+        [SerializeField] GameObject seedSpot;
         private Vector3 startPos;
         private Camera cam;
         private bool grabbing;
@@ -37,7 +37,7 @@ namespace Movement
         void OnMouseUp()
         {
             grabbing = false;
-            transform.position = basketSpot.transform.position;
+            transform.position = seedSpot.transform.position;
         }
     }
 }
