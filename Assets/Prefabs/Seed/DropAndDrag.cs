@@ -1,43 +1,27 @@
+using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Prefabs.Seed
 {
-    public class DropAndDrag : MonoBehaviour
+    public class DropAndDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
     {
-        [SerializeField] GameObject seedSpot;
-        private Vector3 startPos;
-        private Camera cam;
-        private bool grabbing;
-
-        void Awake()
+        [HideInInspector]public Transform parentAfterDrag;
+        public void OnBeginDrag(PointerEventData eventData)
         {
-            startPos = transform.position;
-            cam = Camera.main;
-        
+            parentAfterDrag = transform.parent;
+            transform.SetParent(transform.root);
+            transform.SetAsLastSibling();
         }
 
-        void OnMouseDown()
+        public void OnDrag(PointerEventData eventData)
         {
-            grabbing = true;
+            transform.position = Input.mousePosition;
         }
 
-        void OnMouseDrag()
+        public void OnEndDrag(PointerEventData eventData)
         {
-            if (!grabbing) return;
-
-            Vector3 p = Input.mousePosition;
-            p.z = Mathf.Abs(cam.transform.position.z);  
-
-            Vector3 world = cam.ScreenToWorldPoint(p);
-            world.z = startPos.z;                       
-
-            transform.position = world;
-        }
-
-        void OnMouseUp()
-        {
-            grabbing = false;
-            transform.position = seedSpot.transform.position;
+            transform.SetParent(parentAfterDrag);
         }
     }
 }
