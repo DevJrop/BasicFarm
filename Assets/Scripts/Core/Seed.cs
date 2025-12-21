@@ -5,7 +5,7 @@ public class Seed : ScriptableObject
 {
 
     [SerializeField] private Sprite seed;
-    [SerializeField] private float timeBeforeGrowth;
-    [SerializeField] private GameObject slot;
+    [SerializeField] private float timeAfterGrowth;
+    [SerializeField] private GameObject tree;
 
 }
