@@ -1,23 +1,25 @@
 using UnityEngine;
 
-public class PlantingController : MonoBehaviour
+namespace Controller
 {
-    [SerializeField] private GameObject slotGroupParent;
-    GroundState groundState;
-    void Update()
+    public class PlantingController : MonoBehaviour
     {
-        
-    }
-
-    private void CheckListOfSlots()
-    {
-        if (groundState.EmptySlot() == false)
+        [SerializeField] private Transform slotGroupParent;
+        [SerializeField] private GameObject seed;
+        bool canPlant;
+    
+        public void CheckListOfSlots()
         {
-            foreach (GameObject slot in slotGroupParent.GetComponentsInChildren<GameObject>())
+        
+            foreach (Transform slot in slotGroupParent)
             {
-                
+                if (slot.childCount == 0) 
+                {
+                    
+                    Instantiate(seed, slot);
+                    return;
+                }
             }
         }
     }
-    
 }
