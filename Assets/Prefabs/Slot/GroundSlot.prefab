@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5758277153613232987}
   - component: {fileID: 4837881507552070623}
   - component: {fileID: 5795145561820692634}
-  - component: {fileID: 8608614414394201867}
   m_Layer: 5
   m_Name: GroundSlot
   m_TagString: Untagged
@@ -114,15 +113,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 669a5dcc72b32874190d17303c0525da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
---- !u!114 &8608614414394201867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8582559541613619213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: defc8f35d1ff05a4a915fd8ff44dab46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GroundState

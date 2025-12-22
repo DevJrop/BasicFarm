@@ -4,7 +4,7 @@ using UnityEngine;
 public class Seed : ScriptableObject
 {
 
-    [SerializeField] private Sprite seed;
+     public GameObject seed;
     [SerializeField] private float timeAfterGrowth;
     [SerializeField] private GameObject tree;
 

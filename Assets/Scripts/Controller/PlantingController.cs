@@ -5,7 +5,7 @@ namespace Controller
     public class PlantingController : MonoBehaviour
     {
         [SerializeField] private Transform slotGroupParent;
-        [SerializeField] private GameObject seed;
+        [SerializeField] private Seed kindOfSeed;
         bool canPlant;
     
         public void CheckListOfSlots()
@@ -16,7 +16,7 @@ namespace Controller
                 if (slot.childCount == 0) 
                 {
                     
-                    Instantiate(seed, slot);
+                    Instantiate(kindOfSeed.seed, slot);
                     return;
                 }
             }
