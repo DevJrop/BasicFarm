@@ -1,2 +1,14 @@
 fileFormatVersion: 2
 guid: d7c369bd47adbe54389b2f2fa6ca061d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - slotGroupParent: {instanceID: 0}
+  - kindOfSeed: {fileID: 11400000, guid: 1e318d45f07541a4289581908f6b2364, type: 2}
+  - kindOfTree: {fileID: 11400000, guid: 5e4eb2a74eff90845bc17e3075e55d60, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

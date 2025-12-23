@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0606a08a296062a409cdc1fb18e99568, type: 3}
-  m_Name: AppleSeed
-  m_EditorClassIdentifier: Assembly-CSharp::Seed
-  seed: {fileID: 7801030831210697052, guid: b944288e96551e24c841f50029d0ce0e, type: 3}
-  timeAfterGrowth: 3
+  m_Script: {fileID: 11500000, guid: 402ba1d7266aded4b8809424056f1191, type: 3}
+  m_Name: AppleTree
+  m_EditorClassIdentifier: Assembly-CSharp::Tree
   tree: {fileID: 1350860491004855528, guid: 8d3e7e88ed8752d498b7b1ebbc72a70f, type: 3}
+  numFruits: 0
+  timeBetweenFruits: 0

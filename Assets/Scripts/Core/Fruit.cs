@@ -5,6 +5,5 @@ using UnityEngine;
 public class Fruit : ScriptableObject
 {
     [SerializeField] FruitType type;
-
     public FruitType Type => type;
 }
