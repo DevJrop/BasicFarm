@@ -10,24 +10,33 @@ namespace Controller
         [SerializeField] private Transform slotGroupParent;
         [SerializeField] private Seed kindOfSeed;
         [SerializeField] private Tree kindOfTree;
-        
-         public void CheckListOfSlots()
+
+        Action finishAction;
+
+        public void CheckListOfSlots()
         {
             foreach (Transform slot in slotGroupParent)
             {
                 if (slot.childCount == 0) 
                 {
                     GameObject instSeed = Instantiate(kindOfSeed.seed, slot);
-                    StartCoroutine(Timer(instSeed, slot));
+                    Timer(instSeed, slot);
                     return;
                 }
             }   
         }
-        private IEnumerator Timer(GameObject instSeed, Transform slot)
+        private void Timer(GameObject instSeed, Transform slot)
         {
-            yield return new WaitForSeconds(kindOfSeed.timeAfterGrowth);
-                Destroy(instSeed.gameObject);
-                Instantiate(kindOfTree.tree, slot);
+            CountDown cd = instSeed.GetComponent<CountDown>();
+            Action finishCharging = () => FinishCharging(instSeed, slot);
+            cd.Init(kindOfSeed.timeAfterGrowth, finishCharging);
         }
+
+        void FinishCharging(GameObject instSeed, Transform slot)
+        {
+            Destroy(instSeed.gameObject);
+            Instantiate(kindOfTree.tree, slot);
+        }
+        
     }
 }
