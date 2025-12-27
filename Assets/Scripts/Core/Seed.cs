@@ -6,5 +6,6 @@ public class Seed : ScriptableObject
 
      public GameObject seed;
      public float timeAfterGrowth;
+     public Tree growsInto;
 
 }

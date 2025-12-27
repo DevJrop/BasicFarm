@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0606a08a296062a409cdc1fb18e99568, type: 3}
-  m_Name: AppleSeed
+  m_Name: BananaSeed
   m_EditorClassIdentifier: Assembly-CSharp::Seed
-  seed: {fileID: 7801030831210697052, guid: b944288e96551e24c841f50029d0ce0e, type: 3}
-  timeAfterGrowth: 3
-  growsInto: {fileID: 11400000, guid: 5e4eb2a74eff90845bc17e3075e55d60, type: 2}
+  seed: {fileID: 3178680603557157070, guid: 0699f919ae7cc9b40846a3626a2e24f6, type: 3}
+  timeAfterGrowth: 5
+  growsInto: {fileID: 11400000, guid: d10d7d36a81fae349856c4b427a109b2, type: 2}

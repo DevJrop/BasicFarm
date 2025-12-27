@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 402ba1d7266aded4b8809424056f1191, type: 3}
-  m_Name: AppleTree
+  m_Name: BananaTree
   m_EditorClassIdentifier: Assembly-CSharp::Tree
-  tree: {fileID: 5588175112862193042, guid: fa91ce9ae93cad649afe8bd717df84be, type: 3}
+  tree: {fileID: 3005766797096736340, guid: dcb148d04c7f532499175f9892fd262d, type: 3}
   numFruits: 0
   timeBetweenFruits: 0

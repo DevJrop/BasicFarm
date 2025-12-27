@@ -8,34 +8,28 @@ namespace Controller
     public class PlantingController : MonoBehaviour
     {
         [SerializeField] private Transform slotGroupParent;
-        [SerializeField] private Seed kindOfSeed;
-        [SerializeField] private Tree kindOfTree;
 
-        Action finishAction;
-
-        public void CheckListOfSlots()
+        public void Plant(Seed seedToPlant)
         {
             foreach (Transform slot in slotGroupParent)
             {
-                if (slot.childCount == 0) 
-                {
-                    GameObject instSeed = Instantiate(kindOfSeed.seed, slot);
-                    Timer(instSeed, slot);
+                    if (slot.childCount != 0) continue;
+                    GameObject instSeed = Instantiate(seedToPlant.seed, slot);
+                    StartGrowth(instSeed, slot, seedToPlant);
                     return;
-                }
+                
             }   
         }
-        private void Timer(GameObject instSeed, Transform slot)
+        private void StartGrowth(GameObject instSeed, Transform slot, Seed seedData)
         {
             CountDown cd = instSeed.GetComponent<CountDown>();
-            Action finishCharging = () => FinishCharging(instSeed, slot);
-            cd.Init(kindOfSeed.timeAfterGrowth, finishCharging);
+            cd.Init(seedData.timeAfterGrowth, () => FinishCharging(instSeed, slot, seedData));
         }
 
-        void FinishCharging(GameObject instSeed, Transform slot)
+        void FinishCharging(GameObject instSeed, Transform slot,Seed seedData)
         {
-            Destroy(instSeed.gameObject);
-            Instantiate(kindOfTree.tree, slot);
+            Destroy(instSeed);
+            Instantiate(seedData.growsInto.tree, slot);
         }
         
     }
