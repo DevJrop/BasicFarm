@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 402ba1d7266aded4b8809424056f1191, type: 3}
   m_Name: AppleTree
   m_EditorClassIdentifier: Assembly-CSharp::Tree
-  tree: {fileID: 5588175112862193042, guid: fa91ce9ae93cad649afe8bd717df84be, type: 3}
+  tree: {fileID: 8962429416095272621, guid: 72ceb2fd62052f842b52996da308ef31, type: 3}
   numFruits: 0
   timeBetweenFruits: 0
