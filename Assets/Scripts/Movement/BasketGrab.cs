@@ -1,5 +1,4 @@
 using UnityEngine;
-
 namespace Movement
 {
     public class BasketGrab : MonoBehaviour
@@ -8,19 +7,15 @@ namespace Movement
         private Vector3 startPos;
         private Camera cam;
         private bool grabbing;
-
         void Awake()
         {
             startPos = transform.position;
             cam = Camera.main;
-        
         }
-
         void OnMouseDown()
         {
             grabbing = true;
         }
-
         void OnMouseDrag()
         {
             if (!grabbing) return;
@@ -33,7 +28,6 @@ namespace Movement
 
             transform.position = world;
         }
-
         void OnMouseUp()
         {
             grabbing = false;

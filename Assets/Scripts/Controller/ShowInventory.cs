@@ -17,5 +17,10 @@ namespace Controller
             inventory.gameObject.SetActive(false);
             Debug.Log("Close Inventory");
         }
+
+        public void DestroyGameObject(GameObject gameObject)
+        {
+            Destroy(gameObject);
+        }
     }
 }

@@ -1,21 +1,30 @@
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
-public class FruitGenerator : MonoBehaviour
+namespace Controller
 {
-    /* Al ser instanciado el arbol comienza a generar la fruta
-     * Generar 1 fruta por cantidad de maxima de fruta.
-     * al generar el maximo de frutas debe parar de generar
-     * al pasar la canasta por encima de los arboles debe salir la animacionde recollecion de frutas
-     *
-     */
-
-
-    private void SpawnFruits()
+    public class FruitGenerator : MonoBehaviour
     {
-        
-    }
-    void Update()
-    {
-        
+      
+        [SerializeField] TMP_Text fruitvalue;
+        private int currentFruit;
+        [SerializeField] private Tree tree;
+    
+        void Start()
+        {
+            StartCoroutine(GetFruit());
+        }
+
+        IEnumerator GetFruit()
+        {
+            while (currentFruit < tree.maxFruits)
+            {
+                yield return new WaitForSeconds(tree.timeBetweenFruits);
+                currentFruit++;
+                fruitvalue.text = $"{tree.maxFruits}/{currentFruit}";
+            }
+        }
     }
 }

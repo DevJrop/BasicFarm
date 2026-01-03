@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class CountDown : MonoBehaviour
 {
-  
     [SerializeField] private TextMeshProUGUI counterText;
     private float remining;
     private float duration;
     Action onFinish;
-
     public void Init(float durationSeconds, Action finishCallBack)
     {
-        
       remining = durationSeconds;
       duration = durationSeconds;
       onFinish = finishCallBack;
@@ -20,9 +17,7 @@ public class CountDown : MonoBehaviour
       counterText.text = Mathf.CeilToInt(remining).ToString();
 
       enabled = true;
-
     }
-   
     private void Update()
     {
         remining -= Time.deltaTime;

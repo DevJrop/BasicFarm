@@ -1,8 +1,11 @@
 using UnityEngine;
 
-public class FruitHolder : MonoBehaviour
+namespace Core
 {
-    [SerializeField] private Fruit fruitData;
+    public class FruitHolder : MonoBehaviour
+    {
+        [SerializeField] private Fruit fruitData;
     
-    public Fruit FruitData => fruitData;
+        public Fruit FruitData => fruitData;
+    }
 }
