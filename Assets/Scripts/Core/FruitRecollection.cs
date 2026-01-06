@@ -1,36 +1,34 @@
 using System;
 using System.Collections.Generic;
+using Controller;
 using UnityEngine;
 namespace Core
 {
     public class FruitRecollection : MonoBehaviour
     {
+       
         private Dictionary<FruitType, int> fruitCounter = new Dictionary<FruitType, int>();
         public event Action ChangeUI;
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (!other.CompareTag("Fruit")) return;
-        
-            FruitHolder fruitHolder = other.GetComponent<FruitHolder>();
-        
-            if (fruitHolder == null) return;
-        
-            FruitReader(other, fruitHolder);
-        }
-        private void FruitReader(Collider2D other, FruitHolder fruitHolder)
-        {
-            Fruit fruit = fruitHolder.FruitData;
-        
-            FruitType type = fruit.Type;
+            if (!other.CompareTag("HarvestZone")) return;
             
-            AddFruit(type);
+            AddFruit(other);
             ChangeUI?.Invoke();
-            Destroy(other.gameObject);
         }
-        public void AddFruit(FruitType type)
+        public void AddFruit(Collider2D other)
         {
+            FruitGenerator fruitGenerator = other.GetComponent<FruitGenerator>();
+            if (fruitGenerator == null) return;
+            
+            Tree tree = fruitGenerator.tree;
+            FruitType type = tree.type;
+            
+            int amount = fruitGenerator.CurrentFruit;
             fruitCounter.TryGetValue(type, out int count);
-            fruitCounter[type] = count + 1;
+            fruitCounter[type] = count + amount;
+            fruitGenerator.CurrentFruit = 0;
+
         }
         public int FruitCount(FruitType type)
         {

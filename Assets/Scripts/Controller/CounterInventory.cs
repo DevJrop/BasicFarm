@@ -25,6 +25,7 @@ namespace Controller
 
         private void ShowList()
         {
+            if (appleText == null) { Debug.LogError("appleText NULL", this); return; }
             int appleValue = fruitRecollection.FruitCount(FruitType.Manzana);
             appleText.text = appleValue.ToString();
 

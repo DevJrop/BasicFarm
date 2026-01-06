@@ -26,7 +26,7 @@ namespace Controller
         void FinishCharging(GameObject instSeed, Transform slot,Seed seedData)
         {
             Destroy(instSeed);
-            Instantiate(seedData.growsInto.tree, slot);
+            Instantiate(seedData.growsInto.treeSprite, slot);
         }
     }
 }

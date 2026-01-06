@@ -10,9 +10,15 @@ namespace Controller
       
         [SerializeField] TMP_Text fruitvalue;
         private int currentFruit;
-        [SerializeField] private Tree tree;
-    
-        void Start()
+        [SerializeField] public Tree tree;
+
+        public int CurrentFruit
+        {
+            get => currentFruit;
+            set => currentFruit = value;
+        }
+
+        void Awake()
         {
             StartCoroutine(GetFruit());
         }

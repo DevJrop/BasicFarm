@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Core;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Fruit", menuName = "Scriptable Objects/Fruit")]

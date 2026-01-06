@@ -1,2 +1,12 @@
 fileFormatVersion: 2
 guid: 9235bcfab784a6c408c99890995b0138
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - fruitGenerator: {fileID: 4423711677643238877, guid: 794ccbb5a239cd346bc59c918dde943a, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

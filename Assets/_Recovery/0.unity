@@ -5505,9 +5505,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Controller.CounterInventory
   fruitRecollection: {fileID: 1482344902}
-  appleText: {fileID: 1122282500}
-  bananoText: {fileID: 653427748}
-  mangoText: {fileID: 44902906}
+  appleText: {fileID: 0}
+  bananoText: {fileID: 0}
+  mangoText: {fileID: 0}
 --- !u!224 &170125528677250836 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 988443800097499374, guid: 8f4e0248e673fec448a7d076ae8b7a6f, type: 3}

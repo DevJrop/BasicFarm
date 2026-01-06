@@ -1,8 +1,9 @@
-using UnityEngine;
-
-public enum FruitType
+namespace Core
 {
-   Manzana,
-   Mango,
-   Banano
+   public enum FruitType
+   {
+      Manzana,
+      Mango,
+      Banano
+   }
 }
