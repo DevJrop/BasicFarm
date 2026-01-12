@@ -1,9 +1,8 @@
-using System;
 using Core;
 using TMPro;
 using UnityEngine;
 
-namespace Controller
+namespace UI
 {
     public class CounterInventory : MonoBehaviour
     {

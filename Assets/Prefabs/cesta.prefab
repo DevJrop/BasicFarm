@@ -69,7 +69,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 294945352959807818, guid: b788a394f639bd84287848b37d791d1c, type: 3}
+  m_Sprite: {fileID: 3701972677041676393, guid: 0227b04b7e86c5842b62537822902dfd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -104,7 +104,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9235bcfab784a6c408c99890995b0138, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Core.FruitRecollection
-  fruitAmount: 0
 --- !u!61 &2496340223404212294
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4402694434433285982, guid: 794ccbb5a239cd346bc59c918dde943a, type: 3}
+      propertyPath: fruitGenerator
+      value: 
+      objectReference: {fileID: 1223329376344176078}
+    - target: {fileID: -4364636267521585954, guid: 794ccbb5a239cd346bc59c918dde943a, type: 3}
+      propertyPath: treeData
+      value: 
+      objectReference: {fileID: 11400000, guid: d10d7d36a81fae349856c4b427a109b2, type: 2}
     - target: {fileID: 292819154945982196, guid: 794ccbb5a239cd346bc59c918dde943a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -96,12 +104,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: BananaTree
       objectReference: {fileID: 0}
+    - target: {fileID: 4173777377964013511, guid: 794ccbb5a239cd346bc59c918dde943a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4423711677643238877, guid: 794ccbb5a239cd346bc59c918dde943a, type: 3}
       propertyPath: tree
       value: 
       objectReference: {fileID: 11400000, guid: d10d7d36a81fae349856c4b427a109b2, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -4364636267521585954, guid: 794ccbb5a239cd346bc59c918dde943a, type: 3}
+    - {fileID: 5972078290111873231, guid: 794ccbb5a239cd346bc59c918dde943a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 794ccbb5a239cd346bc59c918dde943a, type: 3}
+--- !u!114 &1223329376344176078 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4423711677643238877, guid: 794ccbb5a239cd346bc59c918dde943a, type: 3}
+  m_PrefabInstance: {fileID: 3287079909849520147}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eba5b810c4361b40a95eac8ff7c97b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FruitGenerator

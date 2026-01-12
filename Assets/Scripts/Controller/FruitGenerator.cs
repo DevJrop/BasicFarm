@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -8,29 +9,34 @@ namespace Controller
     public class FruitGenerator : MonoBehaviour
     {
       
-        [SerializeField] TMP_Text fruitvalue;
+        public event Action<int, int> OnFruitChanged;
         private int currentFruit;
         [SerializeField] public Tree tree;
 
         public int CurrentFruit
         {
             get => currentFruit;
-            set => currentFruit = value;
+            set
+            {
+                currentFruit = value;
+                OnFruitChanged?.Invoke(currentFruit, tree.maxFruits); 
+            }  
         }
 
         void Awake()
         {
             StartCoroutine(GetFruit());
+            OnFruitChanged?.Invoke(currentFruit, tree.maxFruits);
         }
 
         IEnumerator GetFruit()
         {
-            while (currentFruit < tree.maxFruits)
+            while (currentFruit < tree.maxFruits) // < en lugar de <=
             {
                 yield return new WaitForSeconds(tree.timeBetweenFruits);
-                currentFruit++;
-                fruitvalue.text = $"{tree.maxFruits}/{currentFruit}";
+                CurrentFruit++; // usa la propiedad para disparar evento
             }
         }
+
     }
 }
