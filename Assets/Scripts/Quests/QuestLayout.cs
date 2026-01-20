@@ -1,6 +1,7 @@
+using Core;
 using UnityEngine;
 
-namespace Core
+namespace Quests
 {
     [CreateAssetMenu(fileName = "QuestLayout", menuName = "Scriptable Objects/QuestLayout")]
     public class QuestLayout : ScriptableObject
@@ -8,11 +9,8 @@ namespace Core
     
         public string questName;
         public string questInfo;
-        public GameObject questPrefab;
         public int reward;
-        public Dificult dificulty;
         public FruitType fruitType;
         public int requiredAmount; 
-        public bool questCompleted;
     }
 }

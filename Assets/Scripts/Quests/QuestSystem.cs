@@ -1,7 +1,7 @@
 using Core;
 using UnityEngine;
 
-namespace Controller
+namespace Quests
 {
     public class QuestSystem : MonoBehaviour
     {
