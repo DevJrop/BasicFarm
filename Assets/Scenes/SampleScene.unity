@@ -3725,7 +3725,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 868523285}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1538631556}
+        m_TargetAssemblyTypeName: Quests.QuestSystem, Assembly-CSharp
+        m_MethodName: Claim
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &868523285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6090,9 +6102,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7029d80b48d1ca4d8a9075c7545d263, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Quests.QuestSystem
-  questGroup: []
+  questGroup:
+  - {fileID: 11400000, guid: 7fc7fd89279e8ca489e92d256f0c8dc5, type: 2}
+  - {fileID: 11400000, guid: 427a5f03dec1abc4da59415bea052281, type: 2}
+  - {fileID: 11400000, guid: fe620f536ba350b4e9ab837f86cf1a25, type: 2}
+  - {fileID: 11400000, guid: 5deeeda0ae57d8644b63b81d379c5454, type: 2}
+  - {fileID: 11400000, guid: 0165bbebd240fcb4ab8ddb7c514c115f, type: 2}
   button: {fileID: 868523283}
-  fruitRecollection: {fileID: 0}
+  fruitRecollection: {fileID: 1482344902}
 --- !u!1001 &1546580423
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7186,7 +7203,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2113071483
 RectTransform:
   m_ObjectHideFlags: 0
