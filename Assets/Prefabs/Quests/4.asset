@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41c48af6d2b5b74439ec2dda96ec4e95, type: 3}
   m_Name: 4
   m_EditorClassIdentifier: Assembly-CSharp::Quests.QuestLayout
-  questName: Sweet Banana
+  questTitle: Crazy banana
   questInfo: Farm Banana
   reward: 20
   fruitType: 2
-  requiredAmount: 10
+  requiredAmount: 30

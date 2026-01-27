@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41c48af6d2b5b74439ec2dda96ec4e95, type: 3}
   m_Name: 2
   m_EditorClassIdentifier: Assembly-CSharp::Quests.QuestLayout
-  questName: complex apples
+  questTitle: Crazy apple
   questInfo: Farm apples
   reward: 20
   fruitType: 0

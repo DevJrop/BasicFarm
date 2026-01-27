@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41c48af6d2b5b74439ec2dda96ec4e95, type: 3}
   m_Name: 1
   m_EditorClassIdentifier: Assembly-CSharp::Quests.QuestLayout
-  questName: Love for apples
-  questInfo: Farm apples
+  questTitle: Love for apples
+  questInfo: farm apples
   reward: 20
   fruitType: 0
   requiredAmount: 10

@@ -1,6 +1,7 @@
 using System;
 using Controller;
 using Core;
+using TMPro;
 using UnityEngine;
 
 namespace Quests
@@ -13,9 +14,17 @@ namespace Quests
         [SerializeField] private Transform button;
         [SerializeField] private FruitRecollection fruitRecollection;
         
+        [SerializeField] private TMP_Text titleText;
+        [SerializeField] private TMP_Text descriptionText;
+        [SerializeField] private TMP_Text fruitText;
+        [SerializeField] private TMP_Text rewardText;
+        
         private void Start()
         {
             LoadQuest(0);
+
+            UpdateTextUI();
+            
             
             if (fruitRecollection != null)
                 fruitRecollection.ChangeUI += Refresh;
@@ -35,6 +44,8 @@ namespace Quests
         {
             index = Mathf.Clamp(newIndex, 0, questGroup.Length - 1);
             quest = questGroup[index];
+            
+            
         }
 
         private void Refresh()
@@ -56,8 +67,20 @@ namespace Quests
             if (next < questGroup.Length)
             {
                 LoadQuest(next);
+                UpdateTextUI();
             }
             Refresh();
+        }
+
+        private void UpdateTextUI()
+        {
+            if (quest == null) return;
+            
+            titleText.SetText(quest.questTitle);
+            descriptionText.SetText(quest.questInfo);
+            fruitText.SetText(quest.requiredAmount.ToString());
+            rewardText.SetText(quest.reward.ToString());
+            
         }
     }
 }
