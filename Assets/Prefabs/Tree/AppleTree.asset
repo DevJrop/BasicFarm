@@ -15,4 +15,4 @@ MonoBehaviour:
   treeSprite: {fileID: 8962429416095272621, guid: 72ceb2fd62052f842b52996da308ef31, type: 3}
   type: 0
   maxFruits: 20
-  timeBetweenFruits: 2
+  timeBetweenFruits: 1

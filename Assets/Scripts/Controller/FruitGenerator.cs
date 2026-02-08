@@ -1,34 +1,58 @@
 using System;
 using System.Collections;
 using UnityEngine;
+
 namespace Controller
 {
     public class FruitGenerator : MonoBehaviour
     {
         public event Action<int, int> OnFruitChanged;
-        private int currentFruit;
+
         [SerializeField] public Tree tree;
+
+        private int currentFruit;
+        private Coroutine fruitRoutine;
+
         public int CurrentFruit
         {
             get => currentFruit;
             set
             {
-                currentFruit = value;
-                OnFruitChanged?.Invoke(currentFruit, tree.maxFruits); 
-            }  
+                currentFruit = Mathf.Clamp(value, 0, tree.maxFruits);
+                OnFruitChanged?.Invoke(currentFruit, tree.maxFruits);
+                
+                TryStartGenerating();
+            }
         }
-        void Awake()
+
+        private void Awake()
         {
-            StartCoroutine(GetFruit());
             OnFruitChanged?.Invoke(currentFruit, tree.maxFruits);
+            TryStartGenerating();
         }
-        IEnumerator GetFruit()
+
+        private void TryStartGenerating()
         {
-            while (currentFruit < tree.maxFruits)
+            if (tree == null) return;
+            
+            if (currentFruit >= tree.maxFruits) return;
+            
+            if (fruitRoutine != null) return;
+
+            fruitRoutine = StartCoroutine(GetFruit());
+        }
+        private IEnumerator GetFruit()
+        {
+            while (CurrentFruit < tree.maxFruits)
             {
                 yield return new WaitForSeconds(tree.timeBetweenFruits);
+                
+                if (CurrentFruit >= tree.maxFruits)
+                    break;
+
                 CurrentFruit++;
             }
+            fruitRoutine = null;
         }
     }
 }
