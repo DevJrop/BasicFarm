@@ -63,7 +63,7 @@ namespace Quests
             bool spent = fruitRecollection.TrySpendFruit(quest.fruitType, quest.requiredAmount);
             if (!spent) return;
 
-            int next = index = 1;
+            int next = index + 1;
             if (next < questGroup.Length)
             {
                 LoadQuest(next);

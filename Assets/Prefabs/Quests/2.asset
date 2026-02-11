@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Quests.QuestLayout
   questTitle: Crazy apple
   questInfo: Farm apples
-  reward: 20
+  reward: 10
   fruitType: 0
   requiredAmount: 40

@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Quests.QuestLayout
   questTitle: Crazy banana
   questInfo: Farm Banana
-  reward: 20
+  reward: 18
   fruitType: 2
   requiredAmount: 30
