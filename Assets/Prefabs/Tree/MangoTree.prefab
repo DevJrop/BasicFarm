@@ -96,6 +96,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MangoTree
       objectReference: {fileID: 0}
+    - target: {fileID: 4423711677643238877, guid: 794ccbb5a239cd346bc59c918dde943a, type: 3}
+      propertyPath: tree
+      value: 
+      objectReference: {fileID: 11400000, guid: 6292191787ba7db4082c7474f2cf04b0, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
