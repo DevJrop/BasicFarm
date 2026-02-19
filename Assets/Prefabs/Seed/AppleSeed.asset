@@ -15,3 +15,4 @@ MonoBehaviour:
   seed: {fileID: 7801030831210697052, guid: b944288e96551e24c841f50029d0ce0e, type: 3}
   timeAfterGrowth: 3
   growsInto: {fileID: 11400000, guid: 5e4eb2a74eff90845bc17e3075e55d60, type: 2}
+  seedCost: 2

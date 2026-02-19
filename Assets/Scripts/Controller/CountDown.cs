@@ -1,35 +1,43 @@
 using System;
+using Core;
 using TMPro;
 using UnityEngine;
 
-public class CountDown : MonoBehaviour
+namespace Controller
 {
-    [SerializeField] private TextMeshProUGUI counterText;
-    private float remining;
-    private float duration;
-    Action onFinish;
-    public void Init(float durationSeconds, Action finishCallBack)
+    public class CountDown : MonoBehaviour
     {
-      remining = durationSeconds;
-      duration = durationSeconds;
-      onFinish = finishCallBack;
-      
-      counterText.text = Mathf.CeilToInt(remining).ToString();
-
-      enabled = true;
-    }
-    private void Update()
-    {
-        remining -= Time.deltaTime;
+        [SerializeField] private TextMeshProUGUI counterText;
         
-        remining = Mathf.Clamp(remining, 0, duration);
-        
-        counterText.text = Mathf.CeilToInt(remining).ToString();
-
-        if (remining <= 0 )
+        private float remining;
+        private float duration;
+        Seed seed;
+        Action onFinish;
+        public void Init(float durationSeconds, Action finishCallBack)
         {
-            enabled = false;
-            onFinish?.Invoke();
+            remining = durationSeconds;
+            duration = durationSeconds;
+            onFinish = finishCallBack;
+      
+            counterText.text = Mathf.CeilToInt(remining).ToString();
+
+            enabled = true;
+        }
+        
+
+        private void Update()
+        {
+            remining -= Time.deltaTime;
+        
+            remining = Mathf.Clamp(remining, 0, duration);
+        
+            counterText.text = Mathf.CeilToInt(remining).ToString();
+
+            if (remining <= 0 )
+            {
+                enabled = false;
+                onFinish?.Invoke();
+            }
         }
     }
 }
