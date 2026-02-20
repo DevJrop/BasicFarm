@@ -1,13 +1,14 @@
-using Prefabs.Seed;
 using UnityEngine;
 using UnityEngine.EventSystems;
-
-public class Drop : MonoBehaviour, IDropHandler
+namespace Movement
 {
-    public void OnDrop(PointerEventData eventData)
+    public class Drop : MonoBehaviour, IDropHandler
     {
-        GameObject dropped = eventData.pointerDrag;
-        DropAndDrag dropAndDrag = dropped.GetComponent<DropAndDrag>();
-        dropAndDrag.parentAfterDrag = transform;
+        public void OnDrop(PointerEventData eventData)
+        {
+            GameObject dropped = eventData.pointerDrag;
+            DropAndDrag dropAndDrag = dropped.GetComponent<DropAndDrag>();
+            dropAndDrag.parentAfterDrag = transform;
+        }
     }
 }

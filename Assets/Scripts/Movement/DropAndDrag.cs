@@ -1,8 +1,6 @@
-using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
-
-namespace Prefabs.Seed
+namespace Movement
 {
     public class DropAndDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
     {
@@ -13,12 +11,10 @@ namespace Prefabs.Seed
             transform.SetParent(transform.root);
             transform.SetAsLastSibling();
         }
-
         public void OnDrag(PointerEventData eventData)
         {
             transform.position = Input.mousePosition;
         }
-
         public void OnEndDrag(PointerEventData eventData)
         {
             transform.SetParent(parentAfterDrag);

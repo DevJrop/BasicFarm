@@ -2,13 +2,11 @@ using System;
 using Core;
 using TMPro;
 using UnityEngine;
-
 namespace Controller
 {
     public class CountDown : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI counterText;
-        
         private float remining;
         private float duration;
         Seed seed;
@@ -18,21 +16,14 @@ namespace Controller
             remining = durationSeconds;
             duration = durationSeconds;
             onFinish = finishCallBack;
-      
             counterText.text = Mathf.CeilToInt(remining).ToString();
-
             enabled = true;
         }
-        
-
         private void Update()
         {
             remining -= Time.deltaTime;
-        
             remining = Mathf.Clamp(remining, 0, duration);
-        
             counterText.text = Mathf.CeilToInt(remining).ToString();
-
             if (remining <= 0 )
             {
                 enabled = false;

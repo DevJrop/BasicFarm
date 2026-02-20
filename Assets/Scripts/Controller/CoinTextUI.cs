@@ -1,14 +1,12 @@
-using UnityEngine;
-using TMPro;
 using Quests;
-
-namespace UI
+using TMPro;
+using UnityEngine;
+namespace Controller
 {
     public class CoinTextUI : MonoBehaviour
     {
         [SerializeField] private Wallet wallet;
         [SerializeField] private TextMeshProUGUI coinText;
-
         private void OnEnable()
         {
             if (wallet != null)
@@ -16,13 +14,11 @@ namespace UI
 
             UpdateUI();
         }
-
         private void OnDisable()
         {
             if (wallet != null)
                 wallet.OnCoinsChanged -= UpdateUI;
         }
-
         private void UpdateUI()
         {
             if (wallet == null || coinText == null) return;

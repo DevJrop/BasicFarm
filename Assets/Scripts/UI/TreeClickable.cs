@@ -1,7 +1,6 @@
 using Controller;
 using UnityEngine;
 using UnityEngine.EventSystems;
-
 namespace UI
 {
     public class TreeClickable : MonoBehaviour, IPointerClickHandler

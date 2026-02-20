@@ -19,13 +19,10 @@ namespace Movement
         void OnMouseDrag()
         {
             if (!grabbing) return;
-
             Vector3 p = Input.mousePosition;
             p.z = Mathf.Abs(cam.transform.position.z);  
-
             Vector3 world = cam.ScreenToWorldPoint(p);
             world.z = startPos.z;                       
-
             transform.position = world;
         }
         void OnMouseUp()

@@ -10,14 +10,10 @@ namespace Controller
         {
             if (target != null)
                 target.OnFruitChanged -= UpdateText;
-
             target = newTarget;
-            
             if (target != null)
             {
                 target.OnFruitChanged += UpdateText;
-
-           
                 UpdateText(target.CurrentFruit, target.tree.maxFruits);
             }
             else

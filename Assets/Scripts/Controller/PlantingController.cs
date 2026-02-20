@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Core;
 using UnityEngine;
 namespace Controller
@@ -8,7 +5,6 @@ namespace Controller
     public class PlantingController : MonoBehaviour
     {
         [SerializeField] private Transform slotGroupParent;
-
         public void Plant(Seed seedToPlant)
         {
             foreach (Transform slot in slotGroupParent)
