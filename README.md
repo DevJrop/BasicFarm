@@ -1,4 +1,4 @@
-# BasicFarm (Unity 2D Mobile Prototype)
+# BasicFarm (Unity 2D Mobile Prototype) Unity version 6000.2.8f1
 
 A lightweight **2D mobile-oriented prototype** focused on building **scalable gameplay systems**: quests, fruit collection, economy/shop, and a **responsive UI** (anchors, pivots, and proper scaling).
 
